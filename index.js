@@ -67,6 +67,17 @@ musa.JambScores = MusaJambScore;
 console.log(musa);
 
 // QUESTION FOUR
+let firstInput = { firstName: "Ojoachele", lastName: "Onuh", age: 25 };
+
+let secondInput = Object.assign({}, firstInput); //(a) - Object.assign() method
+
+let thirdInput = { ...firstInput }; //(b) - Spread Syntax method
+
+let fourthInput = JSON.parse(JSON.stringify(firstInput)); //(c) - JSON.parse() method
+
+firstInput.height = "5.3ft";
+
+console.log(firstInput);
 
 // QUESTION FIVE
 // Using any of the enumeration methods taught in class (for…in  or for..of), log out each of the presidential candidates in this format:
@@ -87,12 +98,6 @@ for (const party in presidentialCandidates) {
     `${presidentialCandidates[party]} is the presidential candidate of ${party}`
   );
 }
-
-// console.log('OBJECT.KEYS METHOD')
-// // object.keys
-// object.keys(presidentialCandidates){
-//     console.log(`object.keys`)
-// }
 
 console.log("FOR OF METHOD");
 // enumeration method - For..of
